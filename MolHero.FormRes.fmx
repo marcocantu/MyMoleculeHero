@@ -18,16 +18,25 @@ object FormRes: TFormRes
     TabIndex = 0
     TabOrder = 0
     TabPosition = PlatformDefault
+    Sizes = (
+      772s
+      469s
+      772s
+      469s)
     object TabItemBuiltin: TTabItem
       CustomIcon = <
         item
         end>
+      TextSettings.Trimming = None
       IsSelected = True
-      Size.Width = 386.000000000000000000
+      Size.Width = 385.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
+      StyleLookup = ''
       TabOrder = 0
       Text = 'Built-in'
+      ExplicitSize.cx = 386.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
       object TabControlPDBs: TTabControl
         Align = Client
         FullSize = True
@@ -38,16 +47,53 @@ object FormRes: TFormRes
         TabIndex = 4
         TabOrder = 0
         TabPosition = PlatformDefault
+        Sizes = (
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s
+          772s
+          420s)
         object TabItemCoffeine: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Coffeine'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoCaffeine: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -100,20 +146,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemBucky: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
-          Size.Width = 49.000000000000000000
+          Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Bucky'
+          ExplicitSize.cx = 49.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoBucky: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -367,20 +417,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemAspirin: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Aspirin'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoAspirin: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -507,20 +561,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemCholesterol: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Cholesterol'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoCholesterol: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -1225,20 +1283,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemCocaine: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = True
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Cocaine'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoCocaine: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -1483,12 +1545,16 @@ object FormRes: TFormRes
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
-          Size.Width = 49.000000000000000000
+          Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Cu'
+          ExplicitSize.cx = 49.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoCu: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -1745,20 +1811,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemCubane: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Cubane'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoCubane: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -1855,20 +1925,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemDiamond: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Diamond'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoDiamond: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -2543,20 +2617,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemEthanol: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Ethanol'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoEthanol: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -2617,20 +2695,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 768.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemGlucose: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
-          Size.Width = 49.000000000000000000
+          Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Glucose'
+          ExplicitSize.cx = 49.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoGlucose: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -2761,20 +2843,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemGraphite: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Graphite'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoGraphite: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -3187,20 +3273,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemLSD: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'LSD'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoLSD: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -3444,20 +3534,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemLycopene: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Lycopene'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoLycopene: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -3735,20 +3829,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemYbco: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
-          Size.Width = 49.000000000000000000
+          Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Ybco'
+          ExplicitSize.cx = 49.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoYbco: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -4048,20 +4146,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemNicotine: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
           Size.Width = 48.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'Nicotine'
+          ExplicitSize.cx = 48.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoNicotine: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -4255,20 +4357,24 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
         object TabItemNaCl: TTabItem
           CustomIcon = <
             item
             end>
+          TextSettings.Trimming = None
           IsSelected = False
-          Size.Width = 46.000000000000000000
+          Size.Width = 50.000000000000000000
           Size.Height = 49.000000000000000000
           Size.PlatformDefault = False
+          StyleLookup = ''
           TabOrder = 0
           Text = 'NaCl'
+          ExplicitSize.cx = 46.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
           object MemoNaCl: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
@@ -4533,8 +4639,8 @@ object FormRes: TFormRes
             Size.Height = 420.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 772.000000000000000000
-            Viewport.Height = 420.000000000000000000
+            Viewport.Width = 752.000000000000000000
+            Viewport.Height = 416.000000000000000000
           end
         end
       end
@@ -4543,12 +4649,16 @@ object FormRes: TFormRes
       CustomIcon = <
         item
         end>
+      TextSettings.Trimming = None
       IsSelected = False
-      Size.Width = 384.000000000000000000
+      Size.Width = 385.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
+      StyleLookup = ''
       TabOrder = 0
       Text = 'Custom'
+      ExplicitSize.cx = 384.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
     end
   end
 end

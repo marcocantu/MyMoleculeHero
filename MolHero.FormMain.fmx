@@ -4,7 +4,7 @@ object FormMain: TFormMain
   Caption = 'Molecule Hero'
   ClientHeight = 419
   ClientWidth = 719
-  WindowState = wsMaximized
+  Quality = HighQuality
   FormFactor.Width = 1920
   FormFactor.Height = 915
   FormFactor.Devices = [Desktop]
@@ -71,12 +71,12 @@ object FormMain: TFormMain
         TabOrder = 1
         object SpeedButtonMenu: TSpeedButton
           Align = Left
-          Position.Y = 2.000000000000000000
           Size.Width = 44.000000000000000000
           Size.Height = 44.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = 'detailstoolbutton'
           Text = 'SpeedButtonMenu'
+          TextSettings.Trimming = None
           Visible = False
         end
         object LabelTitle: TLabel
@@ -89,6 +89,7 @@ object FormMain: TFormMain
           Size.PlatformDefault = False
           TextSettings.Font.Size = 18.000000000000000000
           TextSettings.FontColor = claWhite
+          TextSettings.Trimming = None
           Text = 'Molecule'
         end
         object SpeedButtonInfo: TSpeedButton
@@ -101,6 +102,7 @@ object FormMain: TFormMain
           Size.PlatformDefault = False
           StyleLookup = 'infotoolbutton'
           Text = 'Info'
+          TextSettings.Trimming = None
           OnClick = SpeedButtonInfoClick
         end
       end
@@ -124,6 +126,7 @@ object FormMain: TFormMain
           Size.PlatformDefault = False
           StyleLookup = 'segmentedbuttonleft'
           Text = 'A+B'
+          TextSettings.Trimming = None
           OnClick = SpeedButtonViewModeABClick
         end
         object SpeedButtonViewModeA: TSpeedButton
@@ -137,6 +140,7 @@ object FormMain: TFormMain
           Size.PlatformDefault = False
           StyleLookup = 'segmentedbuttonmiddle'
           Text = 'A'
+          TextSettings.Trimming = None
           OnClick = SpeedButtonViewModeAClick
         end
         object SpeedButtonViewModeB: TSpeedButton
@@ -151,6 +155,7 @@ object FormMain: TFormMain
           Size.PlatformDefault = False
           StyleLookup = 'segmentedbuttonright'
           Text = 'B'
+          TextSettings.Trimming = None
           OnClick = SpeedButtonViewModeBClick
         end
         object SpeedButtonZoomOut: TSpeedButton
@@ -162,6 +167,7 @@ object FormMain: TFormMain
           Size.PlatformDefault = False
           StyleLookup = 'stepperbuttonleft'
           Text = 'SpeedButtonZoomOut'
+          TextSettings.Trimming = None
           OnClick = SpeedButtonZoomOutClick
         end
         object SpeedButtonZoomIn: TSpeedButton
@@ -174,6 +180,7 @@ object FormMain: TFormMain
           Size.PlatformDefault = False
           StyleLookup = 'stepperbuttonright'
           Text = 'spdbtnZoom'
+          TextSettings.Trimming = None
           OnClick = SpeedButtonZoomInClick
         end
       end
@@ -188,13 +195,13 @@ object FormMain: TFormMain
     object RectangleMenu: TRectangle
       Align = Client
       Fill.Color = claBlack
-      Size.Width = 249.000000000000000000
+      Size.Width = 250.000000000000000000
       Size.Height = 419.000000000000000000
       Size.PlatformDefault = False
       Stroke.Color = claWhite
       object LayoutMenuTop: TLayout
         Align = Top
-        Size.Width = 249.000000000000000000
+        Size.Width = 250.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -205,7 +212,7 @@ object FormMain: TFormMain
           Margins.Top = 2.000000000000000000
           Margins.Right = 2.000000000000000000
           Margins.Bottom = 2.000000000000000000
-          Size.Width = 245.000000000000000000
+          Size.Width = 246.000000000000000000
           Size.Height = 44.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = claWhite
@@ -213,12 +220,13 @@ object FormMain: TFormMain
             Align = Client
             StyledSettings = [Family, Style]
             Margins.Left = 8.000000000000000000
-            Size.Width = 237.000000000000000000
+            Size.Width = 238.000000000000000000
             Size.Height = 44.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Size = 18.000000000000000000
             TextSettings.FontColor = claWhite
-            Text = 'Molecule Hero'
+            TextSettings.Trimming = None
+            Text = 'My Molecule Hero'
           end
         end
       end
@@ -228,7 +236,7 @@ object FormMain: TFormMain
         HeaderAppearanceClassName = 'TListHeaderObjects'
         FooterAppearanceClassName = 'TListHeaderObjects'
         Align = Client
-        Size.Width = 249.000000000000000000
+        Size.Width = 250.000000000000000000
         Size.Height = 371.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
