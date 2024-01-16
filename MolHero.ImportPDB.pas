@@ -10,131 +10,146 @@ unit MolHero.ImportPDB;
 
 interface
 
-uses MolHero.MoleculeModel, System.Types;
+uses
+  MolHero.MoleculeModel, System.Types;
 
-function GetMoleculeFromStrings(const sl: TStringDynArray; const m: TMolecule): boolean;
+function GetMoleculeFromStrings(const SL: TStringDynArray; const M: TMolecule): Boolean;
 
 implementation
 
-uses System.Classes, System.SysUtils, IOUtils, MolHero.Utils, MolHero.FormRes;
+uses
+  System.Classes, System.SysUtils, IOUtils, MolHero.Utils, MolHero.FormRes;
 
-function ReadStringsFromFile(const aFileName: string): TStringDynArray;
+function ReadStringsFromFile(const AFileName: string): TStringDynArray;
 begin
-  if TFile.Exists(aFileName) then
-    Result := TFile.ReadAllLines(aFileName)
+  if TFile.Exists(AFileName) then
+    Result := TFile.ReadAllLines(AFileName)
   else
     Result := nil;
 end;
 
-function ExtrAtomKind(const s: string): integer;
+function ExtrAtomKind(const S: string): Integer;
 begin
   try
-    Result := ElementSymbolToAtomicNr(UpperCase(trim(s)));
+    Result := ElementSymbolToAtomicNr(UpperCase(Trim(S)));
   except
     Result := -1;
   end;
 end;
 
-function ExtrAtomCoord(s: string): double;
+function ExtrAtomCoord(S: string): double;
 begin
-  s := trim(s);
-  if not TryStrToFloat(s, Result) then
+  S := Trim(S);
+  if not TryStrToFloat(S, Result) then
   begin
-    s := StringReplace(s,'.',',',[]);
-    Result := StrToFloat(s);
+    S := StringReplace(S,'.',',',[]);
+    Result := StrToFloat(S);
   end;
 end;
 
-procedure TranslateAtoms(const m: TMolecule; minX, minY, minZ, maxX, maxY, maxZ: double);
-var deltaX, deltaY, deltaZ: double;
-  i: Integer; a: TAtomData;
+procedure TranslateAtoms(const M: TMolecule; MinX, MinY, MinZ, MaxX, MaxY, MaxZ: double);
+var
+  DeltaX, DeltaY, DeltaZ: Double;
+  I: Integer; AD: TAtomData;
 begin
-  deltaX := (maxX - minX)/2 + minX;
-  deltaY := (maxY - minY)/2 + minY;
-  deltaZ := (maxZ - minZ)/2 + minZ;
+  DeltaX := (MaxX - MinX)/2 + MinX;
+  DeltaY := (MaxY - MinY)/2 + MinY;
+  DeltaZ := (MaxZ - MinZ)/2 + MinZ;
 
-  for i := 0 to m.Atoms.Count-1 do
+  for I := 0 to M.Atoms.Count-1 do
   begin
-    a := m.Atoms[i];
-    a.Pos.X := a.Pos.X - deltaX;
-    a.Pos.Y := a.Pos.Y - deltaY;
-    a.Pos.Z := a.Pos.Z - deltaZ;
+    AD := M.Atoms[I];
+    AD.Pos.X := AD.Pos.X - DeltaX;
+    AD.Pos.Y := AD.Pos.Y - DeltaY;
+    AD.Pos.Z := AD.Pos.Z - DeltaZ;
   end;
 end;
 
-function GetMoleculeFromStrings(const sl: TStringDynArray; const m: TMolecule): boolean;
-var s: string; i,j: integer; a: TAtomData; b: TBondData;
-  e: string; bs: string; minX, minY, minZ, maxX, maxY, maxZ: double;
-  isFirstAtom: boolean;
+function GetMoleculeFromStrings(const SL: TStringDynArray; const M: TMolecule): Boolean;
+var
+  S: string;
+  I, J: Integer;
+  AD: TAtomData;
+  BD: TBondData;
+  E: string;
+  BS: string;
+  MinX, MinY, MinZ, MaxX, MaxY, MaxZ: Double;
+  IsFirstAtom: Boolean;
 begin
   Result := false;
+  MinX := 0;
+  MinY := 0;
+  MinZ := 0;
+  MaxX := 0;
+  MaxY := 0;
+  MaxZ := 0;
 
-  if sl <> nil then
+  if SL <> nil then
   begin
 
-    isFirstAtom := True;
-    for i := 0 to Length(sl)-1 do
+    IsFirstAtom := True;
+    for I := 0 to Length(SL)-1 do
     begin
-      s := sl[i];
+      S := SL[I];
 
-      if (copy(s,1,4) = 'ATOM') or (copy(s,1,6) = 'HETATM') then
+      if (Copy(S,1,4) = 'ATOM') or (Copy(S,1,6) = 'HETATM') then
       begin
-        e := trim(copy(s,77,2));
-        if e = '' then
-          e := trim(copy(s,13,4));
-        a.Symbol := e;
+        E := Trim(Copy(S,77,2));
+        if E = '' then
+          E := Trim(Copy(S,13,4));
+        AD.Symbol := E;
 
-        a.AtomKind := ExtrAtomKind(e);
+        AD.AtomKind := ExtrAtomKind(E);
 
-        a.Pos.X := ExtrAtomCoord(copy(s,31,8));
-        a.Pos.Y := ExtrAtomCoord(copy(s,39,8));
-        a.Pos.Z := ExtrAtomCoord(copy(s,47,8));
+        AD.Pos.X := ExtrAtomCoord(Copy(S,31,8));
+        AD.Pos.Y := ExtrAtomCoord(Copy(S,39,8));
+        AD.Pos.Z := ExtrAtomCoord(Copy(S,47,8));
 
-        if isFirstAtom then
+        if IsFirstAtom then
         begin
-          minX := a.Pos.X;
-          minY := a.Pos.Y;
-          minZ := a.Pos.Z;
-          maxX := a.Pos.X;
-          maxY := a.Pos.Y;
-          maxZ := a.Pos.Z;
+          MinX := AD.Pos.X;
+          MinY := AD.Pos.Y;
+          MinZ := AD.Pos.Z;
+          MaxX := AD.Pos.X;
+          MaxY := AD.Pos.Y;
+          MaxZ := AD.Pos.Z;
         end
         else
         begin
-          if a.Pos.X < minX then minX := a.Pos.X;
-          if a.Pos.Y < minY then minY := a.Pos.Y;
-          if a.Pos.Z < minZ then minZ := a.Pos.Z;
-          if a.Pos.X > maxX then maxX := a.Pos.X;
-          if a.Pos.Y > maxY then maxY := a.Pos.Y;
-          if a.Pos.Z > maxZ then maxZ := a.Pos.Z;
+          if AD.Pos.X < MinX then MinX := AD.Pos.X;
+          if AD.Pos.Y < MinY then MinY := AD.Pos.Y;
+          if AD.Pos.Z < MinZ then MinZ := AD.Pos.Z;
+          if AD.Pos.X > MaxX then MaxX := AD.Pos.X;
+          if AD.Pos.Y > MaxY then MaxY := AD.Pos.Y;
+          if AD.Pos.Z > MaxZ then MaxZ := AD.Pos.Z;
         end;
 
-        isFirstAtom := False;
+        IsFirstAtom := False;
 
-        m.Atoms.Add(a);
+        M.Atoms.Add(AD);
       end;
 
-      if copy(s,1,6) = 'CONECT' then
+      if copy(S,1,6) = 'CONECT' then
       begin
-        b.IdStart := StrToInt(copy(s,7,5))-1;
+        BD.IdStart := StrToInt(Copy(S,7,5))-1;
 
-        for j := 0 to 3 do
+        for J := 0 to 3 do
         begin
-          bs := trim(copy(s,12+5*j,5));
-          if bs <> '' then
+          BS := Trim(copy(S,12+5*J,5));
+          if BS <> '' then
           begin
-            b.IdEnd := StrToInt(bs)-1;
-            if b.IdEnd > 0 then
-              m.Bonds.Add(b);
+            BD.IdEnd := StrToInt(BS)-1;
+            if BD.IdEnd > 0 then
+              M.Bonds.Add(BD);
           end;
         end;
       end;
     end;
 
-    Result := true;
+    Result := True;
 
-    if not isFirstAtom then
-      TranslateAtoms(m, minX, minY, minZ, maxX, maxY, maxZ);
+    if not IsFirstAtom then
+      TranslateAtoms(M, MinX, MinY, MinZ, MaxX, MaxY, MaxZ);
 
   end;
 end;
